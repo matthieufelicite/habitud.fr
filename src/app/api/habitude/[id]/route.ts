@@ -19,6 +19,21 @@ export async function GET(request: NextRequest, { params }: Params) {
     return Response.json(habitude.rows[0]);
 }
 
+// update
+export async function PUT(request: NextRequest, { params }: Params) {
+
+    const id: number = params.id;
+
+    const data = await request.json();
+
+    const label = data.label;
+
+    const habitude = await sql`update habitude set label = ${label} where id = ${id};`;
+
+    return Response.json(habitude.rows[0]);
+}
+
+// delete
 export async function DELETE(request: NextRequest, { params }: { params: { id: number } }) {
 
     const id: number = params.id;
