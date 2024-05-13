@@ -1,6 +1,18 @@
 import { sql } from "@vercel/postgres";
 import { NextRequest, NextResponse } from "next/server";
 
+// create
+export async function POST(request: NextRequest) {
+
+    const data = await request.json();
+
+    const label = data.label;
+
+    const newHabitude = await sql`insert into habitude (label) values (${label});`;
+
+    return Response.json(newHabitude);
+}
+
 // read
 export async function GET() {
 
@@ -9,18 +21,6 @@ export async function GET() {
     return NextResponse.json(data.rows)
 }
 
-export async function POST(request: NextRequest) {
+// update
 
-    const data = await request.json();
-
-    const label = data.label;
-
-    if (!label) {
-
-        return new NextResponse("pas de label")
-    }
-
-    const newHabitude = await sql`insert into habitude (label) values (${label});`;
-
-    return Response.json(newHabitude);
-}
+// delete

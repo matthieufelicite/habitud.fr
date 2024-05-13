@@ -9,6 +9,8 @@ type Params = {
     }
 }
 
+// create
+
 // read
 export async function GET(request: NextRequest, { params }: Params) {
 

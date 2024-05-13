@@ -1,4 +1,4 @@
 export async function GET() {
 
-    return new Response("Bienvenue !");
+    return new Response("Bienvenue dans l'api !");
 }
