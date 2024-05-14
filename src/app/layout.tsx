@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { cn } from "@/lib/utils";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,13 +15,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
 
-	const classes: string = cn(inter.className, "grainy")
+	const classes: string = cn(inter.className)
 
 	return (
 
 		<html lang="fr">
 
-			<body className={classes}>{children}</body>
+			<body className={classes}>
+
+				{children}
+			</body>
 		</html>
 	);
 }

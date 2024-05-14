@@ -22,12 +22,12 @@ export default function Home() {
 
 				<h1 className='max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl'>
 
-					Suivez vos habitudes en <span className='text-blue-600'>quelques secondes</span>
+					Suivez vos habitudes en <span className='text-gradient'>quelques secondes</span>
 				</h1>
 
-				<p className='mt-5 max-w-prose text-zinc-700 sm:text-lg'>
+				<p className='mt-5 max-w-3xl text-zinc-700 sm:text-lg'>
 
-					<span className='text-blue-600 font-semibold'>habitud</span> vous permet de changer votre vie grace au pouvoir des habitudes. Construisez de bonnes habitudes et supprimez les mauvaises en <span className='text-blue-600 font-semibold'>quelques secondes</span> par jour.
+					<span className='text-gradient font-semibold'>habitud</span> vous permet de changer votre vie grace au pouvoir des habitudes. Construisez de bonnes habitudes et supprimez les mauvaises en <span className='text-gradient font-semibold'>quelques secondes</span> par jour.
 				</p>
 
 				<Link href='/' className={buttonVariants({ size: 'lg', className: 'mt-5' })}>
