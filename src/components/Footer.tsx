@@ -64,7 +64,7 @@ const footer = {
         },
         {
             name: 'GitHub',
-            href: '#',
+            href: '/',
             icon: (props: any) => (
 
                 <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
@@ -95,7 +95,7 @@ export default function Footer() {
 
         <div className="mx-auto mt-32 max-w-7xl px-6 lg:px-8" >
 
-            <footer className="bg-white">
+            <footer>
 
                 <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
 
